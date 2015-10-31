@@ -1,0 +1,10 @@
+dataAEX = load('dataAEX.mat');
+labelsAEX = load('labelsAEX.mat');
+
+dataAEX = dataAEX.data;
+L = linkage(dataAEX, 'complete');
+figure;
+[h, nodes, origin] = dendrogram(L);
+hAxis = get(h(1), 'parent') 
+perm = str2num(get(hAxis, 'XtickLabel'));
+set(hAxis, 'XtickLabel', labels(perm));

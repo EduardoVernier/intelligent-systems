@@ -1,0 +1,14 @@
+dataAEX = load('dataAEX.mat');
+labelsAEX = load('labelsAEX.mat');
+
+dataAEX = dataAEX.data;
+
+L = linkage(dataAEX);
+figure;
+dendrogram(L);
+
+
+
+
+
+
